@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IRCTC - Train Search</title>
+    <style>
+        body {
+            
+                
+                background-image: url("train.jpeg");
+                background-size: cover; 
+                background-repeat: no-repeat; 
+            
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #e6dbe3;
+        }
+        h2{
+            text-align: center;
+            color:#FF0000;
+        }
+        h3{
+            text-align: center;
+            color:#0066ff;
+        }
+        h4{
+            text-align: center;
+            color:#0de9a0;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #1a237e;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #3949ab;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to IRCTC - Train Search</h1>
+    <h2>INDIAN RAILWAY   </h2>
+    <h3>SAFETY SECURITY PUNCTUALITY  </h3>
+    <h4> <marquee behavior="scroll" direction="left">Indian Railway &nbsp; Indian Railway &nbsp; Indian Railway &nbsp; Indian Railway &nbsp; Indian Railway &nbsp; Indian Railway &nbsp;Indian Railway &nbsp;Indian Railway</marquee>
+    </h4>
+   
+    <!-- Form to collect user input -->
+    <form action="search_train.php" method="post">
+        <label for="from_station">From Station:</label>
+        <input type="text" id="from_station" name="from_station" required><br><br>
+        <label for="to_station">To Station:</label>
+        <input type="text" id="to_station" name="to_station" required><br><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <input type="submit" value="Search Trains">
+    </form>
+
+    <!-- Modal HTML for COVID-19 Precautions -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>COVID-19 Precautions</h2>
+            <p>Please maintain social distancing, wear masks, and follow safety guidelines while traveling.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for modal functionality -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Function to display the modal
+        function displayModal() {
+            modal.style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Display the modal when the page loads
+        window.onload = function() {
+            displayModal();
+        };
+    </script>
+</body>
+</html>
